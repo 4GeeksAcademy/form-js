@@ -3,3 +3,12 @@
 body{
     background: white;
 }
+
+.invalid {
+    background-color: rgb(194, 28, 28);
+}
+
+.mensaje {
+    height: 200px;
+    
+}

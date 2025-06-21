@@ -12,6 +12,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
     "bootstrap": "^5.1.1"
   },
   "engines": {

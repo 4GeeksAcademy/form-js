@@ -1,35 +1,109 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Rigo with Vanilla.js</title>
+
+  <!-- Fontawesome is our recomended library for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Write your HTML code here, you can delete everything withing the body tags -->
+  <div class="container-fluid mt-3">
+    <div class="card text-start">
+      <div class="card-header">
+        Payment form example
+      </div>
+      <div id="alertaErrores" class="alert alert-danger m-3 d-none" role="alert">
+        Some fields are missing
+      </div>
+      <div class="card-body">
+        <form id="paymentForm" class="row g-3 needs-validation" novalidate>
+          <div class="col-md-5">
+            <label class="form-label">Card</label>
+            <input name="card" type="text" class="form-control" placeholder="xxxxxxxxxxxxxxxx">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">CVC</label>
+            <input name="cvc" type="text" class="form-control" placeholder="0000">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Amount</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">$</span>
+              <input name="amount" type="text" class="form-control" placeholder="Amount">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">First name</label>
+            <input name="firstname" type="text" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last name</label>
+            <input name="lastname" type="text" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">City</label>
+            <input name="city" type="text" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">State</label>
+            <select name="state" class="form-select">
+              <option selected disabled value="">Pick a state</option>
+              <option>Canada</option>
+              <option>Florida</option>
+              <option>Miami</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Postal code</label>
+            <input name="postal" type="text" class="form-control">
+          </div>
+          <div class="col-6">
+            <p>We accept:</p>
+            <div class="bg-secondary p-2 w-50">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment" value="mastercard">
+                <label class="form-check-label"><i class="fa-brands fa-cc-mastercard"></i></label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment" value="visa">
+                <label class="form-check-label"><i class="fa-brands fa-cc-visa"></i></label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment" value="amex">
+                <label class="form-check-label"><i class="fa-brands fa-cc-amex"></i></label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment" value="diners">
+                <label class="form-check-label"><i class="fa-brands fa-cc-diners-club"></i></label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>Message</p>
+            <div class="form-floating">
+              <textarea name="message" class="form-control mensaje" placeholder="Leave a comment here" id="floatingTextarea2"
+                ></textarea>
+              <label for="floatingTextarea2">Message</label>
+            </div>
+            <small>add any notes here</small>
+          </div>
+          <div class="card-footer text-body-secondary text-end">
+            <button type="button" class="btn btn-secondary mx-2">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>
